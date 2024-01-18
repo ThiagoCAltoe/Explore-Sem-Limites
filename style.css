@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+  --font-color-pink: #b52184;
+  --font-color-purple: #312d64;
+  --bg-color-gradient-purple: linear-gradient(
+    96deg,
+    #343193 0%,
+    #302c63 99.68%
+  );
+  --color-white: #ffff;
+  --bg-color: #f9f4fb;
+  font-family: "Mulish", sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  min-width: 43rem;
+
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "form"
+    "footer";
+  flex-direction: column;
+  margin: auto;
+  background: var(--bg-color);
+}
+
+header {
+  display: grid;
+  grid-template-areas:
+    "img1"
+    "h11"
+    "p1"
+    "seta1";
+  max-width: max-content;
+  justify-content: center;
+  grid-area: header;
+}
+
+header > img:first-child {
+  height: 37rem;
+  margin: 0 3.3rem 1.7rem;
+  grid-area: img1;
+}
+header > h1 {
+  max-width: max-content;
+  margin: auto;
+  margin-bottom: 0.5rem;
+  font-size: 3.2rem;
+  color: var(--font-color-pink);
+  font-weight: 900;
+  grid-area: h11;
+}
+
+header > p {
+  max-width: max-content;
+  margin: auto;
+  margin-bottom: 3.5rem;
+  font-size: 2rem;
+  grid-area: p1;
+}
+
+header > div {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 9.3rem;
+  grid-area: seta1;
+}
+
+main {
+  background: var(--bg-color-gradient-purple);
+  min-width: 43rem;
+  display: grid;
+  gap: 5rem;
+  padding: 5.2rem 0;
+  grid-area: main;
+}
+
+.item {
+  background: var(--color-white);
+  width: 35.2rem;
+  border-radius: 2.4rem;
+  padding: 2.6rem;
+  margin: auto;
+}
+
+.item > img {
+  width: 8rem;
+}
+
+.item > h2 {
+  margin-top: 3.3rem;
+  margin-bottom: 1.9rem;
+
+  color: var(--font-color-pink);
+  font-weight: 900;
+  font-size: 2.9rem;
+}
+
+.item > p {
+  color: var(--font-color-purple);
+  font-weight: 600;
+  font-size: 1.6rem;
+  width: 26.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  width: max-content;
+  margin: auto;
+  grid-area: form;
+  padding-bottom: 6.5rem;
+}
+
+form > legend {
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: var(--font-color-pink);
+
+  margin-top: 7.8rem;
+  margin-bottom: 1.9rem;
+}
+
+button,
+input,
+fieldset,
+textarea {
+  border: none;
+  background: none;
+  font-family: "Mulish", sans-serif;
+}
+
+.input-wrapper {
+  width: 34.8rem;
+  border-radius: 16px;
+  border: 1.5px solid var(--font-color-purple);
+  padding: 1.2rem 1.6rem 1.2rem 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.input-wrapper label {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+::placeholder {
+  color: var(--font-color-purple);
+}
+
+textarea {
+  height: 9.8rem;
+  min-width: 31.6rem;
+}
+
+form > button {
+  background: var(--bg-color-gradient-purple);
+  color: var(--color-white);
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  padding: 1rem 1.6rem;
+  border-radius: 1.6rem;
+  cursor: pointer;
+  transition: filter 200ms;
+  height: 4.5rem;
+  width: 15.1rem;
+}
+
+footer {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-white);
+
+  background: var(--bg-color-gradient-purple);
+
+  grid-area: footer;
+}
+
+footer > p {
+  max-width: max-content;
+  padding: 3.2rem 0;
+  margin: auto;
+  height: 7.8rem;
+}
+
+@media (min-width: 1440px) {
+  header {
+    grid-template-areas:
+      "h11 img1"
+      "p1 img1"
+      "seta1 img1";
+    margin-left: 10.9rem;
+    max-width: 144rem;
+  }
+  header > h1 {
+    font-size: 5.8rem;
+    margin-top: 31.2rem;
+    margin-bottom: 8px;
+  }
+
+  header > p {
+    font-size: 3.2rem;
+    margin-bottom: 17.9rem;
+  }
+
+  header > div {
+    justify-content: left;
+  }
+
+  header > img:first-child {
+    height: 73.3rem;
+    margin: 0 2.8rem;
+  }
+  main {
+    max-width: 100%;
+
+    grid-template-areas: "a a a";
+    justify-content: center;
+    gap: 6rem;
+  }
+  #contact {
+    display: flex;
+    background: url(./assets/image6-desktop.png);
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+  .item {
+    width: 36.6rem;
+    height: 44.8rem;
+    padding: 3.2rem;
+  }
+
+  .item > img {
+    width: 9.7rem;
+  }
+
+  .item > h2 {
+    margin-top: 4rem;
+    margin-bottom: 2.4rem;
+
+    color: var(--font-color-pink);
+    font-weight: 900;
+    font-size: 3.5rem;
+  }
+
+  .item > p {
+    color: var(--font-color-purple);
+    font-weight: 600;
+    font-size: 1.9rem;
+    width: 32.1rem;
+  }
+
+  .input-wrapper {
+    width: 59.2rem;
+  }
+  form {
+    flex: 1;
+    margin-left: 10.9rem;
+  }
+  #contact .stars {
+    flex: 1;
+  }
+}
